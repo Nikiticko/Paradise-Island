@@ -1,8 +1,66 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+b, body, html, h1 {
+  all: unset;
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 900;
+  font-size: 10vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.1ex 0.6ex 0.4ex;
 }
+h1 + h1 {
+  z-index: 10;
+  color: transparent;
+  background: none;
+}
+h1 + h1::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border: 2px solid #000;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #a36a3b;
+}
+
+b {
+  --speed-weed: 50s;
+  --speed-medium: 10s;
+  --speed-speed: 2s;
+  
+  --speed: var(--speed-medium);
+  position: absolute;
+  top: calc(var(--rnd1) * 100vh);
+  left: calc(var(--rnd2) * 100vw);
+  animation: var(--speed) drop infinite linear;
+  animation-delay: calc(calc(1 - var(--rnd3)) * -1 * var(--speed));
+  user-select: none;
+  font-size: 5vmin;
+  pointer-events: none;
+  will-change: transform, filter;
+  z-index: -1;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-100vh) scale(calc(var(--rnd3) * 2 + 1)) rotate(0deg);
+    filter: blur(calc(calc(1 - var(--rnd3)) * 5px));
+  }
+  25% {
+    filter: blur(1.5px);
+  }
+  100% {
+    transform: translateY(100vh) scale(calc(var(--rnd3) * 2 + 1)) rotate(1800deg);
+    filter: blur(calc(calc(1 - var(--rnd3)) * 5px));
+  }
+}
+
