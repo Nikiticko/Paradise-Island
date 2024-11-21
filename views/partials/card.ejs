@@ -1,0 +1,114 @@
+<style>
+/* Контент страницы, ниже верхней панели */
+.content {
+  margin-top: 85px; /* Отступ от верхней панели, чтобы карточки не накладывались */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Карточка услуги */
+.service-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 280px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Изображение услуги */
+.service-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #60381f;
+}
+
+/* Контент карточки */
+.service-content {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Название услуги */
+.service-title {
+  font-family: 'AmaticSC', Arial, sans-serif;
+  font-size: 1.8em;
+  color: #60381f;
+  margin-bottom: 10px;
+}
+
+/* Описание услуги */
+.service-description {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Футер карточки с ценой и кнопкой */
+.service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-price {
+  font-family: 'AmaticSC', Arial, sans-serif;
+  font-size: 1.6em;
+  color: #4b2e18;
+  font-weight: 700;
+}
+
+.buy-button {
+  background-color: #60381f;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: 'AmaticSC', Arial, sans-serif;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #4b2e18;
+  border-color: #4b2e18;
+}
+</style>
+
+<div class="content">
+    <div class="service-card">
+      <img src="/images/sandwich.jpg" alt="Услуга" class="service-image">
+      <div class="service-content">
+        <h3 class="service-title">Услуга 1</h3>
+        <p class="service-description">Описание услуги. Здесь будет краткая информация о том, что включает услуга и какие преимущества она имеет для вас.</p>
+        <div class="service-footer">
+          <span class="service-price">500 ₽</span>
+          <button class="buy-button">Купить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="/images/sandwich.jpg" alt="Услуга" class="service-image">
+      <div class="service-content">
+        <h3 class="service-title">Услуга 2</h3>
+        <p class="service-description">Описание услуги. Здесь будет краткая информация о том, что включает услуга и какие преимущества она имеет для вас.</p>
+        <div class="service-footer">
+          <span class="service-price">800 ₽</span>
+          <button class="buy-button">Купить</button>
+        </div>
+      </div>
+    </div>
+    <!-- Добавьте другие карточки здесь -->
+  </div>
